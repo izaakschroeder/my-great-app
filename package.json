@@ -1,0 +1,39 @@
+{
+	"name": "",
+	"version": "0.1.0",
+	"description": "",
+	"author": "",
+	"keywords": [  ],
+	"license": "CC0-1.0",
+	"homepage": "",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"main": "lib/app.js",
+	"scripts": {
+		"test": "npm run lint && npm run spec && npm run coverage",
+		"spec": "NODE_PATH=lib NODE_ENV=test istanbul cover node_modules/.bin/_mocha -- -r test/helpers/chai test/spec",
+		"lint": "eslint --ignore-path .gitignore .",
+		"coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100",
+		"start": "foreman start"
+	},
+	"dependencies": {
+		"lodash": "^2.4.1",
+		"express": "^4.10.4",
+		"express-version": "^0.1.0"
+	},
+	"peerDependencies": {
+
+	},
+	"devDependencies": {
+		"chai": "^1.10.0",
+		"eslint": "^0.10.0",
+		"eslint-plugin-nodeca": "1.0.3",
+		"istanbul": "^0.3.2",
+		"mocha": "^2.0.1"
+	},
+	"engines": {
+		"node": "^0.10 || ^0.11"
+	}
+}
